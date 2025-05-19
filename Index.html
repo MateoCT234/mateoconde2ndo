@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musica</title>
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .boton {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .boton:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .contenido {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #4CAF50;
+            font-size: 3em;
+            margin: 40px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 200px);
+            gap: 15px;
+            margin: 50px 0;
+            position: relative;
+        }
+        
+        .collage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+        }
+        
+        .collage img:nth-child(1) {
+            grid-area: 1 / 1 / 3 / 3;
+            transform: rotate(-3deg);
+        }
+        
+        .collage img:nth-child(2) {
+            grid-area: 1 / 3 / 2 / 5;
+            transform: rotate(2deg);
+        }
+        
+        .collage img:nth-child(3) {
+            grid-area: 2 / 3 / 4 / 5;
+            transform: rotate(-2deg);
+        }
+        
+        .collage img:nth-child(4) {
+            grid-area: 1 / 5 / 3 / 6;
+            transform: rotate(5deg);
+        }
+        
+        .collage img:nth-child(5) {
+            grid-area: 3 / 1 / 4 / 3;
+            transform: rotate(3deg);
+        }
+        
+        .collage img:hover {
+            transform: rotate(0deg) scale(1.05);
+            z-index: 2;
+        }
+        
+        .slogan {
+            font-size: 1.5em;
+            color: #888;
+            margin: 30px 0;
+            font-style: italic;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating-note {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.3;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .floating-note:nth-child(1) { left: 5%; top: 10%; }
+        .floating-note:nth-child(2) { right: 15%; top: 30%; animation-delay: 0.5s; }
+        .floating-note:nth-child(3) { left: 20%; bottom: 20%; animation-delay: 1s; }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="index.html" class="boton">Inicio</a>
+        <a href="informacion.html" class="boton">Información</a>
+        <a href="formulario.html" class="boton">Formulario</a>
+    </div>
+
+    <div class="contenido">
+        <h1>🎶 Música, el arte de hoy🌍</h1>
+        <p class="slogan">Donde cada nota cuenta una historia</p>
+        
+        <div class="collage">
+            <div class="floating-note">🎸</div>
+            <div class="floating-note">🎧</div>
+            <div class="floating-note">🎹</div>
+            
+            <img src="https://cdn.pixabay.com/photo/2016/11/22/19/15/audience-1850119_1280.jpg" alt="Concierto">
+            <img src="https://weezevent.com/wp-content/uploads/2023/05/09181844/ser-dj.jpg" alt="DJ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcqUg38vBPuSXf3soTuL_ipU58RnIt3Tr06g&s" alt="Streaming">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5FMLKHb3MhcEj9jZIOgsTNc5LKYO3ky9SlQ&s" alt="Guitarra">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG88zODcU16cVCEpDvPeeuQcCxuYzhmTv4RQ&s" alt="Vinilo">
+        </div>
+    </div>
+</body>
+</html>
